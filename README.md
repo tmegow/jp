@@ -29,6 +29,12 @@ Attempts PCRE2 matches against values (and optionally keys) and returns match lo
 Can optionally accept standard input using the filename `-`.
 
 ## Example:
+
+    $ kubectl get pvc pmm-client-backups -o json | jp - "ReadWrite"
+    .metadata.annotations.kubectl.kubernetes.io/last-applied-configuration
+    .spec.accessModes[0]
+    .status.accessModes[0]
+
     $ curl -s https://api.github.com/repos/kubernetes/kubernetes/issues | jp - "[cC]layton"
     [22].assignee.login
     [22].assignee.url
