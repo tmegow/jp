@@ -11,9 +11,3 @@ jp_SOURCES = jp.c json.c pcre2/.libs/libpcre2-8.a
 AM_CFLAGS = -Wno-switch -I${abs_builddir}/argp/ -I${abs_builddir}/pcre2/.libs/
 AM_LDFLAGS = -L${abs_builddir}/argp/ -largp -lpcre2-8 -lm -no-fast-install
 endif
-
-
-
-
-#jp_SOURCES = jp.c json.c pcre2/libpcre2-posix.la
-#AM_LDFLAGS = -L${abs_builddir}/argp/  -L${abs_builddir}/pcre2/.libs/ -largp -lpcre2-8 -lm -no-fast-install
