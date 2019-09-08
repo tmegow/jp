@@ -7,7 +7,13 @@ AM_LDFLAGS = -L${abs_builddir}/pcre2/ -lpcre2-8 -lm -no-install
 endif
 if OSX
 SUBDIRS = pcre2 argp
-jp_SOURCES = jp.c json.c pcre2/libpcre2-posix.la
-AM_CFLAGS = -Wno-switch -I${abs_builddir}/argp/ -I${abs_builddir}/pcre2/src/
-AM_LDFLAGS = -L${abs_builddir}/argp/  -L${abs_builddir}/pcre2/ -largp -lpcre2-8 -lm -no-fast-install
+jp_SOURCES = jp.c json.c pcre2/.libs/libpcre2-8.a
+AM_CFLAGS = -Wno-switch -I${abs_builddir}/argp/ -I${abs_builddir}/pcre2/.libs/
+AM_LDFLAGS = -L${abs_builddir}/argp/ -largp -lpcre2-8 -lm -no-fast-install
 endif
+
+
+
+
+#jp_SOURCES = jp.c json.c pcre2/libpcre2-posix.la
+#AM_LDFLAGS = -L${abs_builddir}/argp/  -L${abs_builddir}/pcre2/.libs/ -largp -lpcre2-8 -lm -no-fast-install
