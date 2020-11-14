@@ -24,6 +24,7 @@ If building succeeds, an executable should be built in the base of the repo. Put
 
 
 ---
+---
 # Usage
 Attempts PCRE2 matches against values (and optionally keys) and returns match location in [jsonpath](https://goessner.net/articles/JsonPath/) (optionally returns value found at jsonpath).
 Can optionally accept standard input using the filename `-`.
