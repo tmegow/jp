@@ -11,6 +11,14 @@ Prerequisites:
 
 To build run `./configure` then `make`.
 
+### OS X (Tested on macOS 10.15 Catalina)
+Prerequisites:
+- xcode
+- autoconf
+- automake
+
+To build run `./configure --disable-shared` then `make`.
+
 ## Installing
 If building succeeds, an executable should be built in the base of the repo. Put it in your shell's path or do with it what you wish.
 
