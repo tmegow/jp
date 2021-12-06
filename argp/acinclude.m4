@@ -403,9 +403,9 @@ dnl the "ISO C9X: 7.18 Integer types <stdint.h>" section requires the
 dnl existence of an include file <stdint.h> that defines a set of 
 dnl typedefs, especially uint8_t,int32_t,uintptr_t.
 dnl Many older installations will not provide this file, but some will
-dnl have the very same definitions in <inttypes.h>. In other enviroments
+dnl have the very same definitions in <inttypes.h>. In other environments
 dnl we can use the inet-types in <sys/types.h> which would define the
-dnl typedefs int8_t and u_int8_t respectivly.
+dnl typedefs int8_t and u_int8_t respectively.
 dnl
 dnl This macros will create a local "_stdint.h" or the headerfile given as 
 dnl an argument. In many cases that file will just "#include <stdint.h>" 
@@ -550,7 +550,7 @@ if test "_$ac_cv_header_stdint_x" = "_" ; then
     128/888)     name="$name, ILP64 (unusual  64bit numeric)" ;;
     128/*)       name="$name        (unusual int64 model)" ;; 
     222/*|444/*) name="$name        (unusual dsptype)" ;;
-     *)          name="$name        (very unusal model)" ;;
+     *)          name="$name        (very unusual model)" ;;
    esac
    AC_MSG_RESULT([combined for stdint datatype model...  $name])
 fi
@@ -918,7 +918,7 @@ typedef unsigned long uintmax_t;
 #define __intptr_t_defined
 /* we encourage using "long" to store pointer values, never use "int" ! */
 #if   _STDINT_LONG_MODEL+0 == 242 || _STDINT_LONG_MODEL+0 == 484
-typedef  unsinged int   uintptr_t;
+typedef  unsigned int   uintptr_t;
 typedef           int    intptr_t;
 #elif _STDINT_LONG_MODEL+0 == 244 || _STDINT_LONG_MODEL+0 == 444
 typedef  unsigned long  uintptr_t;
