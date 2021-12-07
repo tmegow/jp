@@ -11,7 +11,7 @@ Prerequisites:
 
 To build run `./configure` then `make`.
 
-### OS X (Tested on macOS 10.15 Catalina)
+### OS X (Tested on macOS 10.15.7 Catalina)
 Prerequisites:
 - xcode
 - autoconf
